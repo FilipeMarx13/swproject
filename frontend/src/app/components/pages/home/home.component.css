@@ -1,0 +1,21 @@
+.wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    margin: 10px;
+}
+
+.text {
+    color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    position: absolute;
+    left: 15px;
+    opacity: 0.6;
+}

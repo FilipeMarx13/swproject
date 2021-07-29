@@ -1,0 +1,9 @@
+<h1 class="center">Virtual Scroll using Angular 7</h1>
+
+<ul *ngIf="loaded" class="list">
+  <cdk-virtual-scroll-viewport  style="height: 160vh" itemSize="160" >
+    <ng-container *cdkVirtualFor="let n of peopleArray, let i = index">
+      <li> {{n}} </li>
+    </ng-container>
+  </cdk-virtual-scroll-viewport>
+</ul>

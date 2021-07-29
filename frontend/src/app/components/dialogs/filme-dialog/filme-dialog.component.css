@@ -1,0 +1,35 @@
+.close{
+    display: flex;
+    flex-direction: row-reverse;
+
+    margin: 3px;
+    padding: 3px;
+}
+
+/* mat-accordion{
+    width: 1000px;
+    height: 20%;
+} */
+
+::ng-deep .mat-dialog-container{
+    height: 85%;
+    width: 75vw;
+    background-color: #312e2e;
+}
+mat-panel-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+mat-expansion-panel-header{
+    font-weight: 600;
+    
+}
+
+::ng-deep .mat-expansion-panel-header-title{
+    width: 10vw;
+    color: rgb(90, 89, 0)
+}

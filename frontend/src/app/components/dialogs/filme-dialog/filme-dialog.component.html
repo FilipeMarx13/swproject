@@ -1,0 +1,90 @@
+<div class="close">
+    <button mat-mini-fab color="warn" (click)="clickClose()">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Filme:
+            </mat-panel-title>
+            <mat-panel-description>
+                {{data.title}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+    </mat-expansion-panel>
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Diretor:
+            </mat-panel-title>
+            <mat-panel-description>
+                {{data.director}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <!-- Self aware panel -->
+                Planetas
+            </mat-panel-title>
+            <mat-panel-description>
+                {{panelOpenState ? 'Open' : 'Closed'}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div *ngFor="let planeta of filmeDialogArray">
+            <p>Nome do Planeta: {{planeta.name}} - População: {{planeta.population}}</p>
+            Clima - {{planeta.climate}}
+        </div>
+        <!-- <p>{{data.title}}</p> -->
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <!-- Self aware panel -->
+                Especies
+            </mat-panel-title>
+            <mat-panel-description>
+                {{panelOpenState ? 'Open' : 'Closed'}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div *ngFor="let species of speciesArray">
+            <p>{{species.name}}</p>
+        </div>
+        <p>{{data.title}}</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <!-- Self aware panel -->
+                Personagens
+            </mat-panel-title>
+            <mat-panel-description>
+                {{panelOpenState ? 'Open' : 'Closed'}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div *ngFor="let personagens of personagensArray">
+            <p>{{personagens.name}}</p>
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>
+
+
+<!-- <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+             Self aware panel
+            Planetas
+        </mat-panel-title>
+        <mat-panel-description>
+            {{panelOpenState ? 'Open' : 'Closed'}}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div *ngFor="let planeta of filmeDialogArray">
+        <p>Nome do Planeta: {{planeta.name}} - População: {{planeta.population}}</p>
+        Clima - {{planeta.climate}}
+    </div>
+</mat-expansion-panel> -->

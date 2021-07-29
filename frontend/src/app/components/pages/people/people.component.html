@@ -1,0 +1,28 @@
+<router-outlet></router-outlet>
+<app-header></app-header>
+<p></p>
+<div class="container-fluid">
+  <div class="row">
+    <!-- <cdk-virtual-scroll-viewport itemSize="300">
+
+    </cdk-virtual-scroll-viewport> -->
+    <div class="card col-4" *ngFor="let pessoa of people; let i = index">
+      <div class="card-head">
+        <app-seleton-loader *ngIf="!loaded" Cwidth="100" Cheight="100" circle="true"></app-seleton-loader>
+        <img *ngIf="loaded" class="foto" [src]="getAvatar(i)" alt="Foto">
+      </div>
+      <div class="card-body">
+        <app-seleton-loader *ngIf="!loaded" Cwidth="150" Cheight="25"></app-seleton-loader>
+        <div *ngIf="loaded" class="name">{{pessoa.name}}</div>
+        <app-seleton-loader *ngIf="!loaded" Cwidth="150" Cheight="25"></app-seleton-loader>
+        <div *ngIf="loaded" class="desc">Planeta Natal: {{pessoa.nomePlaneta}}</div>
+        <div *ngIf="loaded" class="filmes">
+          <p>Participações </p>
+          <div *ngFor="let filme of pessoa.nomeFilme">
+            <p>{{filme}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

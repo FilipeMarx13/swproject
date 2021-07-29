@@ -1,0 +1,62 @@
+<app-header></app-header>
+<router-outlet></router-outlet>
+<!-- <div class="container">
+  <div class="row">
+    <mat-card class="mat-card center justify-content-center d-md-flex" *ngFor="let filme of filmes; let i = index">
+      <div class="img">
+        <img mat-card-image rel="preload" class="col  mat-card-image img col-4" [src]="getImagem(i)" alt="Banner">
+      </div>
+      <mat-card-footer class="title">
+        {{filme.title}}
+      </mat-card-footer>
+    </mat-card>
+  </div>
+</div> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <mat-card class="mat-card" *ngFor="let filme of filmes; let i = index">
+      <a (click)="openDialog(filme)">
+        <app-seleton-loader *ngIf="!loaded" Cwidth="100%" Cheight="350" ></app-seleton-loader>
+        <img  *ngIf="loaded" mat-card-image class="image" [src]="getImagem(i)" alt="Banner">
+      </a>
+      <app-seleton-loader *ngIf="!loaded" Cwidth="95%" Cheight="30" ></app-seleton-loader>
+        <mat-card-content *ngIf="loaded"class="content">
+          <a (click)="openDialog(filme)">
+            {{filme.title}}
+          </a>
+        </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+
+<!-- <div class="container">
+  <div class="row">
+    <mat-card class="col bigcard" *ngFor="let filme of filmes; let i = index">
+      <mat-card-header>
+        <div mat-card-avatar class="header"></div>
+        <mat-card-title>{{filme.title}}</mat-card-title>
+      </mat-card-header>
+      <div class="smallcard"> -->
+<!-- | orderBy:'episode_id'  <img mat-card-image class="mat-card-image" src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+<!-- <img mat-card-image rel="preload" class="mat-card-image" [src]="getImagem(i)" alt="Photo of a Shiba Inu">
+        <div class="text">
+          <p>{{filme.episode_id}}</p>
+          <p>{{filme.director}}</p> -->
+<!-- <p>{{filme.opening_crawl}}</p> -->
+
+<!-- <div *ngFor="let planetas of filmes">
+            <p>{{planetas.planets}}</p>
+          </div> -->
+<!-- </div>
+        <button mat-button (click)="openDialog(filme)">
+          <mat-icon>info</mat-icon>
+          </button>
+        <a (click)="openDialog(filme)">
+          <mat-icon>info</mat-icon>
+        </a>
+      </div>
+    </mat-card>
+  </div>
+</div> -->

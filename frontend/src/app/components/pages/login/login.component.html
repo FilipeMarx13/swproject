@@ -1,0 +1,28 @@
+<form fxLayout="row" fxLayout.xs="column" style="width: auto;">
+  <!-- LOGIN -->
+  <div class="container">
+    <div class="login">LOGIN</div>
+  <mat-form-field class="email" appearance="fill">
+    <mat-label class='matemail'>Email</mat-label>
+    <input type="email" matInput [formControl]="emailFormControl" required>
+    <mat-icon matSuffix>email</mat-icon>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+  <!-- PASSWORD -->
+  <mat-form-field appearance="fill">
+    <mat-label class='matemail' for="password">Senha</mat-label>
+    <input matInput id="password" [type]="hide ? 'password' : 'text'" required>
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+      [attr.aria-pressed]="hide">
+      <mat-icon matSuffix>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <button mat-button type="submit" (click)='onClick()' mat-raised-button color="primary" routerLink="/home">LOGIN
+  </button>
+  </div>
+</form>

@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <a routerLink="/home">
+        <img src="assets/img/Star_Wars_logo.png" alt="logo">
+    </a>
+    <a routerLink="/filmes">
+        <mat-icon>video_library</mat-icon><span>Filmes</span>
+    </a>
+    <a routerLink="/people">
+        <mat-icon>person icon</mat-icon><span>Personagens</span>
+    </a>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu class="one" #menu="matMenu">
+        <button mat-menu-item>Perfil</button>
+        <button mat-menu-item>Configurações</button>
+        <button mat-menu-item routerLink="">Sair</button>
+    </mat-menu>
+</mat-toolbar>

@@ -1,0 +1,146 @@
+/* mat-grid-tile {
+    background: lightblue;
+  } 
+
+@media screen and (max-width: 600px) {
+    mat-grid-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    mat-grid-tile {
+        background: lightgrey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }    
+}
+
+span {
+    background: lightgreen;
+    width: 50px;
+    height: 150px;
+    margin: 5px;
+} */
+
+
+/* .full{
+    background: lightslategray;
+    height: 30em;
+    width: 20em;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 10px;
+}
+
+.img{
+    background: lightgreen;
+    height: 15em;
+    width: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+.text {
+    background: lightpink;
+    height: 10em;
+    width: 15em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    background: lightyellow;
+    height: 1em;
+    width: 13em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.25em;
+}
+
+.big{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+:host{
+    /* place-items: center; */
+    width: 100vw;
+    height: 100vh;
+    /*   */
+}
+
+.card {
+    width: 300px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 13px;
+    margin: 3px;
+
+}
+
+.foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    border: 4px solid #000000;
+}
+.card-head, .info{
+    display: flex;
+    justify-content: center;
+}
+
+.info{
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.card-body{
+    display: grid;
+    place-items: center;
+    margin: 0.525rem;
+    padding: 10px;
+}
+.about{
+    margin-top: 10px;
+}
+
+.row{
+    justify-content: center;
+}
+
+.filmes{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.name{
+    font-weight: 800;
+}
+
+@media (max-width: 612px){
+    .row{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

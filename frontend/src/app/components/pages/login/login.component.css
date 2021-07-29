@@ -1,0 +1,136 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgb(238, 183, 235);
+}
+
+div.container {
+    background-color: rgb(255, 255, 255, 0.65);
+    padding: 6% 3% 3% 3%;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center;
+    border-radius: 5%;
+    box-shadow: 0 0 14px rgb(0 0 0 / 25%);
+    width: 33%;
+    height: 60%;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(98, 128, 18);
+    width: 75%;
+    height: 75%; */
+}
+
+.login {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.matemail {
+    color: white;
+}
+
+mat-form-field {
+    width: 100%;
+    margin: 1px;
+    color: #79068e;
+}
+
+@media (max-width: 1024px) {
+    div.container {
+        width: 60%;
+        height: 50%;
+    }
+    @media (max-width: 768px) {
+        div.container {
+            width: 65%;
+            height: 50%;
+        }
+        @media (max-width: 414px) {
+            div.container {
+                width: 70%;
+                height: 50%;
+            }
+            @media (max-width: 360px) {
+                div.container {
+                    width: 75%;
+                    height: 50%;
+                }
+                @media (max-width: 300px) {
+                    div.container {
+                        width: 80%;
+                        height: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* @media (max-width: 500px) {
+
+    div.container {
+        width: 85%;
+        height: 85%;  
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    mat-form-field {
+        width: 90%;
+        margin: 5px;
+    }
+
+    button {
+        color: red;
+    }
+
+    .container {
+        width: 80px;
+    }
+} 
+
+
+@media (max-width: 380px) {
+
+    div.container {
+        width: 95%;
+        height: 95%;  
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    mat-form-field {
+        width: 95%;
+        margin: px;
+    }
+
+    button {
+        color: red;
+    }
+
+    .container {
+        width: 80px;
+    }
+}  */
